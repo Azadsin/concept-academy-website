@@ -1,268 +1,212 @@
-/* ================= GLOBAL ================= */
-html {
-  scroll-behavior: smooth;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #0b0f14;
+  color: #fff;
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
-body {
-  background: #0b0f14;
-  color: #ffffff;
-}
-
-/* ================= HERO ================= */
+/* HERO */
 .hero {
-  min-height: 100vh;
-  display: flex;
+  padding: 90px 60px 70px; /* reduced bottom gap */
+  background:
+    radial-gradient(circle at 20% 20%, #14202e, transparent 40%),
+    radial-gradient(circle at 80% 80%, #0f2a1f, transparent 45%),
+    #0b0f14;
+}
+
+.hero-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
   align-items: center;
-  padding: 80px;
-  background: radial-gradient(circle at top left, #14202e, #0b0f14 70%);
 }
 
-.hero-content {
-  max-width: 650px;
-}
+.hero h1 { font-size: 52px; }
+.hero h1 span { color: #57ff8f; }
 
-.hero h1 {
-  font-size: 48px;
-  line-height: 1.2;
-}
-
-.hero h1 span {
-  color: #57ff8f;
-}
-
-.tagline {
-  margin-top: 20px;
-  color: #57ff8f;
-  font-weight: 600;
-}
-
-.subtext {
-  margin-top: 10px;
+.hero-subtext {
+  margin-top: 16px;
   color: #cfd8e3;
 }
 
-.features {
-  margin: 30px 0;
-  list-style: none;
-}
+.hero-cta { margin-top: 28px; }
 
-.features li {
-  margin-bottom: 8px;
-}
-
-/* ================= CTA ================= */
+/* CTA */
 .cta {
-  display: inline-block;
-  margin-top: 20px;
   padding: 14px 28px;
-  background: #57ff8f;
-  color: #000;
   border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(87, 255, 143, 0.35);
-}
-
-.cta.secondary {
-  background: transparent;
   border: 2px solid #57ff8f;
   color: #57ff8f;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 14px;
 }
-
-.cta.secondary:hover {
+.cta:hover {
   background: #57ff8f;
   color: #000;
 }
 
-/* ================= METHOD SECTION ================= */
-.method {
-  padding: 90px 20px;
-  background: #0f1621;
+/* CORE SYSTEM */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.core-system {
+  width: 260px;
+  height: 260px;
+  position: relative;
+}
+
+/* ORBITS */
+.orbit {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px dashed rgba(87,255,143,0.25);
+  animation: spin linear infinite;
+}
+
+.orbit-1 { inset: -10px; animation-duration: 18s; }
+.orbit-2 { inset: -28px; animation-duration: 26s; }
+.orbit-3 { inset: -46px; animation-duration: 34s; }
+
+/* PLANET */
+.planet {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: #57ff8f;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(87,255,143,0.8);
+  transform: translateX(-50%);
+}
+
+/* CORE */
+.galaxy {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+
+.core-circle {
+  position: absolute;
+  inset: 60px;
+  border-radius: 50%;
+  background: #57ff8f;
+  box-shadow: 0 0 40px rgba(87,255,143,.7);
+}
+
+.core-label {
+  position: absolute;
+  bottom: -32px;
+  width: 100%;
+  text-align: center;
+  color: #57ff8f;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* SECTIONS (reduced gap between system & method) */
+.system {
+  padding: 70px 20px 40px;
   text-align: center;
 }
 
-.method h2 {
-  font-size: 34px;
+.method {
+  padding: 50px 20px 80px;
+  text-align: center;
 }
 
-.method-sub {
-  margin-top: 10px;
-  margin-bottom: 45px;
-  color: #b5c2d1;
-}
-
-/* GRID */
-.method-grid {
+/* GLOW CARDS */
+.system-grid, .method-grid {
+  max-width: 1000px;
+  margin: 40px auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
   gap: 28px;
-  max-width: 1100px;
-  margin: auto;
 }
 
-/* CARD */
-.method-card {
+.glow-card {
+  position: relative;
   background: linear-gradient(180deg, #101b2a, #0c1624);
-  padding: 28px;
-  border-radius: 16px;
-  border: 1px solid rgba(87, 255, 143, 0.18);
-  box-shadow: 0 0 0 rgba(87, 255, 143, 0);
-  transition: all 0.35s ease;
+  padding: 32px;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.35s ease;
 }
 
-.method-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 22px rgba(87, 255, 143, 0.35);
-}
-
-/* CARD TEXT */
-.method-card h3 {
+.glow-card h3 {
   color: #57ff8f;
   margin-bottom: 12px;
-  font-size: 20px;
-  font-weight: 600;
+  position: relative;
+  z-index: 2;
 }
 
-.method-card p {
+.glow-card p {
   color: #cfd8e3;
-  line-height: 1.55;
-  font-size: 15px;
+  position: relative;
+  z-index: 2;
 }
 
-/* ================= FORM SECTION ================= */
+.glow-card::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle, rgba(87,255,143,0.25), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.glow-card:hover::before { opacity: 1; }
+.glow-card:hover { transform: translateY(-6px); }
+
+/* FORM */
 .form-section {
-  background: #10151c;
   padding: 90px 20px;
   text-align: center;
 }
 
-.form-section h2 {
-  font-size: 32px;
-}
-
-.form-section p {
-  color: #b5c2d1;
-  margin-bottom: 30px;
-}
-
-/* FORM */
-form {
-  max-width: 460px;
+.form-section form {
+  max-width: 420px;
   margin: auto;
   display: grid;
-  gap: 15px;
+  gap: 14px;
 }
 
-input,
-select {
+input, select, button {
   padding: 14px;
   border-radius: 10px;
   border: none;
-  width: 100%;
-  font-size: 15px;
-}
-
-input::placeholder {
-  color: #888;
 }
 
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 10px;
 }
 
-#cityOther,
-#schoolOther {
-  display: none;
-}
+#cityOther, #schoolOther { display: none; }
 
-/* BUTTON */
 button {
-  padding: 15px;
-  border-radius: 10px;
-  border: none;
   background: #57ff8f;
   font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(87, 255, 143, 0.35);
-}
-
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer {
-  padding: 35px 20px;
+  padding: 30px;
   text-align: center;
   color: #9fb0c3;
-  font-size: 14px;
 }
+.owner { color: #57ff8f; }
 
-footer .owner {
-  margin-top: 8px;
-  color: #57ff8f;
-}
-
-/* ================= FLOATING WHATSAPP ================= */
-.whatsapp-float {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 56px;
-  height: 56px;
-  background: #25d366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-  z-index: 9999;
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.08);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .hero {
-    padding: 60px 25px;
-  }
-
-  .hero h1 {
-    font-size: 38px;
-  }
-
-  .two-col {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ================= SCROLL ANIMATION ================= */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+@media(max-width:900px){
+  .hero-grid { grid-template-columns: 1fr; text-align: center; }
 }

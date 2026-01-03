@@ -3,77 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Concept Academy | Concept-First Learning</title>
+  <title>Concept Academy | ConceptOS™</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
 <!-- HERO -->
-<section class="hero reveal">
-  <div class="hero-content">
-    <h1>
-      Concept-First Learning<br />
-      <span>for Classes 9–12</span>
-    </h1>
+<section class="hero">
+  <div class="hero-grid">
 
-    <p class="tagline">Because memorizing formulas is not understanding.</p>
+    <div class="hero-text">
+      <p class="hero-eyebrow">Education · Re-engineered</p>
 
-    <p class="subtext">
-      We break every topic down to its core idea — so students don’t just score better,
-      they actually understand.
-    </p>
+      <h1>
+        Learn the <span>Why</span><br />
+        Before the Formula
+      </h1>
 
-    <ul class="features">
-      <li>Explain from basics, then level up</li>
-      <li>Visual and real-life concept building</li>
-      <li>Exam-ready without rote learning</li>
-      <li>Confidence beyond exams</li>
-    </ul>
+      <p class="hero-subtext">
+        Powered by <strong>ConceptOS™</strong> — a concept-first learning system
+        for Classes 9–12.
+      </p>
 
-    <a href="#method" class="cta">Start with Concept Clarity</a>
+      <div class="hero-cta">
+        <a href="#system" class="cta outline">Explore ConceptOS™</a>
+        <a href="#form" class="cta outline">Free Guidance</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="core-system">
+        <div class="orbit orbit-1"><span class="planet"></span></div>
+        <div class="orbit orbit-2"><span class="planet"></span></div>
+        <div class="orbit orbit-3"><span class="planet"></span></div>
+
+        <div class="galaxy"></div>
+        <div class="core-circle"></div>
+        <span class="core-label">Concept Core</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SYSTEM -->
+<section id="system" class="system">
+  <h2>The ConceptOS™ Learning Engine</h2>
+  <p class="system-sub">Understanding first. Scores follow.</p>
+
+  <div class="system-grid">
+    <div class="glow-card">
+      <h3>Concept Core</h3>
+      <p>Build ideas from first principles.</p>
+    </div>
+    <div class="glow-card">
+      <h3>Academic Layer</h3>
+      <p>Formulas, definitions, exam structure.</p>
+    </div>
+    <div class="glow-card">
+      <h3>Application Layer</h3>
+      <p>Logic, confidence, real-world clarity.</p>
+    </div>
   </div>
 </section>
 
 <!-- METHOD -->
-<section id="method" class="method reveal">
+<section class="method">
   <h2>How We Explain Every Concept</h2>
-  <p class="method-sub">
-    Every topic at Concept Academy follows a simple three-step method.
-  </p>
 
   <div class="method-grid">
-    <div class="method-card reveal">
+    <div class="glow-card">
       <h3>Think from zero</h3>
-      <p>Simple language and real-life examples.</p>
+      <p>Simple language and relatable examples.</p>
     </div>
-
-    <div class="method-card reveal">
+    <div class="glow-card">
       <h3>Build academics</h3>
-      <p>Formulas, definitions, and exam patterns.</p>
+      <p>Formulas and exam patterns.</p>
     </div>
-
-    <div class="method-card reveal">
+    <div class="glow-card">
       <h3>Apply smartly</h3>
-      <p>Real-life usage and exam question logic.</p>
+      <p>Logic behind every question.</p>
     </div>
   </div>
 
-  <a href="#form" class="cta secondary">Get Free Academic Guidance</a>
+  <a href="#form" class="cta outline">Get Free Academic Guidance</a>
 </section>
 
 <!-- FORM -->
-<section id="form" class="form-section reveal">
+<section id="form" class="form-section">
   <h2>Free Academic Guidance</h2>
-  <p>Fill the form and we will connect with you</p>
 
   <form id="leadForm">
-    <input id="name" type="text" placeholder="Student Name" required />
+    <input id="name" placeholder="Student Name" required />
     <input id="class" type="number" placeholder="Class (9–12)" required />
 
     <div class="two-col">
       <select id="city" required>
-        <option value="" disabled selected>Select City / Area</option>
+        <option value="" disabled selected>Select City</option>
       </select>
 
       <select id="school" required>
@@ -81,8 +108,8 @@
       </select>
     </div>
 
-    <input id="cityOther" type="text" placeholder="Enter City / Area" />
-    <input id="schoolOther" type="text" placeholder="Enter School Name" />
+    <input id="cityOther" placeholder="Enter City" />
+    <input id="schoolOther" placeholder="Enter School" />
 
     <select id="subject" required>
       <option value="">Select Subject</option>
@@ -92,30 +119,15 @@
       <option>Multiple Subjects</option>
     </select>
 
-    <input id="phone" type="tel" placeholder="WhatsApp Number" required />
+    <input id="phone" placeholder="WhatsApp Number" required />
     <button type="submit">Request Callback</button>
   </form>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>Subjects Offered: Physics · Chemistry · Mathematics · Languages</p>
-  <p>Classes 9–12 · All Boards · India & Abroad</p>
+  <p>ConceptOS™ powered learning · Classes 9–12 · All Boards</p>
   <p class="owner">Founded and Led by <strong>Sonia Singh</strong></p>
 </footer>
-
-<!-- FLOATING WHATSAPP -->
-<a
-  id="whatsappFloat"
-  class="whatsapp-float"
-  data-number="919690862459"
-  target="_blank"
-  aria-label="Chat on WhatsApp"
->
-  <svg viewBox="0 0 32 32" width="26" height="26" fill="#fff">
-    <path d="M16 2C8.3 2 2 8.3 2 16c0 2.5.7 4.9 1.9 7.1L2 30l7.1-1.9C11.1 29.3 13.5 30 16 30c7.7 0 14-6.3 14-14S23.7 2 16 2z"/>
-  </svg>
-</a>
 
 <script src="main.js"></script>
 </body>
