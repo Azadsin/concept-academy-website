@@ -39,7 +39,9 @@ schoolSelect.onchange = () => {
 
 document.getElementById("leadForm").onsubmit = e => {
   e.preventDefault();
-  if(citySelect.value==="Other") set("cities",{...get("cities"),[cityOther.value]:1});
+  if(citySelect.value==="Other") {
+    set("cities",{...get("cities"),[cityOther.value]:1});
+  }
   if(schoolSelect.value==="Other"){
     const s=get("schools");
     s[cityOther.value||citySelect.value]=[schoolOther.value];
@@ -47,3 +49,27 @@ document.getElementById("leadForm").onsubmit = e => {
   }
   window.open("https://wa.me/919690862459");
 };
+
+/* ================================================= */
+/* 📱 MOBILE ONLY: SCROLL-BASED GLOW (NO DESKTOP)   */
+/* ================================================= */
+
+if (window.matchMedia("(max-width: 768px)").matches) {
+
+  const glowCards = document.querySelectorAll(".glow-card");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("glow-active");
+        } else {
+          entry.target.classList.remove("glow-active");
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  glowCards.forEach(card => observer.observe(card));
+}
