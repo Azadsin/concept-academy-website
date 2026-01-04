@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Concept Academy | Concept-First Learning for Classes 6–12</title>
+
+<meta name="description" content="Concept Academy delivers concept-first, system-driven education powered by ConceptOS™. Helping students of Classes 6–12 build clarity, confidence, and exam success." />
+
+<meta name="keywords" content="concept based learning, physics classes 9 to 12, board exam preparation, concept academy, ConceptOS learning system" />
+
+<meta name="author" content="Concept Academy" />
+
+<!-- Open Graph (Social + WhatsApp preview) -->
+<meta property="og:title" content="Concept Academy | Learn the Why Before the Formula" />
+<meta property="og:description" content="A concept-first, system-driven learning platform for Classes 6–12. Powered by ConceptOS™." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://your-domain.com" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Concept Academy | Concept-First Learning" />
+<meta name="twitter:description" content="Clarity-driven education for Classes 6–12 powered by ConceptOS™." />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concept Academy | Learn the Why</title>
+
+  <!-- SEO BASIC -->
+  <meta name="description" content="Concept Academy delivers concept-first, system-driven education powered by ConceptOS™ for Classes 6–12." />
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0b0f14;
+      color: #e6edf3;
+    }
+
+    a { text-decoration: none; }
+
+    /* ---------- HEADER ---------- */
+    header {
+      padding: 22px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.4px;
+    }
+
+    nav a {
+      margin-left: 28px;
+      font-weight: 500;
+      color: #c9d1d9;
+    }
+
+    nav a:hover {
+      color: #57ff8f;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      padding: 90px 60px 120px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      color: #57ff8f;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.15;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+
+    .hero h1 span {
+      color: #57ff8f;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: #b6c2cf;
+      max-width: 520px;
+      margin-bottom: 36px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .cta {
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 15px;
+      border: 1px solid #57ff8f;
+      color: #57ff8f;
+      background: transparent;
+    }
+
+    .cta.primary {
+      background: #57ff8f;
+      color: #0b0f14;
+    }
+
+    /* ---------- HERO VISUAL ---------- */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .core {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #57ff8f 0%, #1a7f4b 70%);
+      box-shadow: 0 0 80px rgba(87,255,143,0.4);
+      position: relative;
+    }
+
+    .core::before,
+    .core::after {
+      content: "";
+      position: absolute;
+      inset: -40px;
+      border-radius: 50%;
+      border: 1px dashed rgba(87,255,143,0.25);
+    }
+
+    .core::after {
+      inset: -70px;
+    }
+
+    .core-label {
+      position: absolute;
+      bottom: -38px;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      color: #9fb0c3;
+    }
+
+    /* ---------- SYSTEM SECTIONS ---------- */
+    section {
+      padding: 90px 60px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 14px;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: #9fb0c3;
+      margin-bottom: 60px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #0f1722, #0c1320);
+      border-radius: 18px;
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .card h3 {
+      color: #57ff8f;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #b6c2cf;
+      line-height: 1.6;
+    }
+
+    /* ---------- CTA STRIP ---------- */
+    .cta-strip {
+      text-align: center;
+      padding: 80px 40px;
+      background: radial-gradient(circle at top, rgba(87,255,143,0.15), transparent 60%);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      padding: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: #8b949e;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-cta {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Concept Academy</div>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="login.html">Login</a>
+    <a href="#guidance">Guidance</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <div class="hero-eyebrow">Education · Re-engineered</div>
+    <h1>Learn the <span>Why</span><br>Before the Formula</h1>
+    <p class="hero-sub">
+      Concept-first, system-driven learning powered by <strong>ConceptOS™</strong>
+      for Classes 6–12.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#system" class="cta primary">Explore ConceptOS™</a>
+      <a href="#guidance" class="cta">Free Academic Guidance</a>
+    </div>
+  </div>
+
+<div class="hero-visual">
+  <svg width="420" height="420" viewBox="0 0 420 420" class="galaxy-svg">
+
+    <!-- ORBITS -->
+    <circle cx="210" cy="210" r="140" stroke="rgba(87,255,143,0.25)" stroke-dasharray="4 4" fill="none"/>
+    <circle cx="210" cy="210" r="165" stroke="rgba(87,255,143,0.25)" stroke-dasharray="4 4" fill="none"/>
+    <circle cx="210" cy="210" r="190" stroke="rgba(87,255,143,0.25)" stroke-dasharray="4 4" fill="none"/>
+
+    <!-- PLANET 1 -->
+    <circle cx="350" cy="210" r="5" fill="#57ff8f">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 210 210"
+        to="360 210 210"
+        dur="14s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <!-- PLANET 2 -->
+    <circle cx="375" cy="210" r="5" fill="#57ff8f">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 210 210"
+        to="360 210 210"
+        dur="20s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <!-- PLANET 3 -->
+    <circle cx="400" cy="210" r="5" fill="#57ff8f">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 210 210"
+        to="360 210 210"
+        dur="28s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <!-- CORE -->
+    <defs>
+      <radialGradient id="coreGlow">
+        <stop offset="0%" stop-color="#6dff9f"/>
+        <stop offset="100%" stop-color="#1f8f55"/>
+      </radialGradient>
+    </defs>
+
+    <circle cx="210" cy="210" r="120" fill="url(#coreGlow)"/>
+    <text x="210" y="355" text-anchor="middle" fill="#9fffc6" font-size="14">Concept Core</text>
+
+  </svg>
+</div>
+
+
+
+</section>
+
+<!-- SYSTEM -->
+<section id="system">
+  <h2 class="section-title">The ConceptOS™ Learning Engine</h2>
+  <p class="section-sub">Understanding first. Performance follows.</p>
+
+  <div class="grid-3">
+    <div class="card">
+      <h3>Concept Core</h3>
+      <p>Build ideas from first principles, not memorised shortcuts.</p>
+    </div>
+    <div class="card">
+      <h3>Academic Layer</h3>
+      <p>Structured formulas, definitions, and board-aligned patterns.</p>
+    </div>
+    <div class="card">
+      <h3>Application Layer</h3>
+      <p>Apply knowledge with confidence to real and exam-based problems.</p>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section>
+  <h2 class="section-title">How We Teach Every Concept</h2>
+  <p class="section-sub">Clarity → Structure → Application</p>
+
+  <div class="grid-3">
+    <div class="card">
+      <h3>Think From Zero</h3>
+      <p>Simple language, relatable analogies, no assumed knowledge.</p>
+    </div>
+    <div class="card">
+      <h3>Build Academics</h3>
+      <p>Formulas and exam logic placed after understanding.</p>
+    </div>
+    <div class="card">
+      <h3>Apply Smartly</h3>
+      <p>Logic-driven solving that works under exam pressure.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section>
+  <h2 class="section-title">Why Parents & Students Trust Concept Academy</h2>
+  <p class="section-sub">
+    Results come from clarity, consistency, and care — not shortcuts.
+  </p>
+
+  <div class="grid-3">
+    <div class="card">
+      <h3>Concept-First Results</h3>
+      <p>
+        Students don’t just improve marks — they develop long-term clarity
+        that works across subjects and exam patterns.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Exam-Stage Confidence</h3>
+      <p>
+        Our system prepares students mentally and academically for
+        high-pressure exams, not just daily classes.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Human-Led Guidance</h3>
+      <p>
+        Every student is guided by experienced educators who understand
+        board patterns, psychology, and performance timing.
+      </p>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:50px;">
+    <a href="#guidance" class="cta">Talk to an Academic Mentor</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <p class="section-sub">
+    Clear answers to the questions parents and students ask most.
+  </p>
+
+  <div class="grid-3">
+    <div class="card">
+      <h3>How is Concept Academy different from regular coaching?</h3>
+      <p>
+        We focus on understanding concepts first, not memorisation.
+        Our system builds clarity, then academics, and finally application —
+        so learning lasts beyond exams.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Is this suitable for weak students or toppers?</h3>
+      <p>
+        Both. Weak students gain clarity and confidence, while strong students
+        deepen understanding and improve application in tough questions.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Which boards and classes are covered?</h3>
+      <p>
+        We work with students from Classes 6–12 across major boards,
+        focusing on concept clarity aligned with exam requirements.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Is learning online or offline?</h3>
+      <p>
+        Guidance and learning formats are designed flexibly.
+        The focus is on quality explanation and consistency,
+        not the medium.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>How does free academic guidance work?</h3>
+      <p>
+        We first understand the student’s current level, challenges,
+        and goals, then suggest the right academic direction —
+        without pressure.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Does Concept Academy use AI?</h3>
+      <p>
+        Technology supports learning and progress tracking,
+        while teachers remain central to explanation, mentoring,
+        and academic decisions.
+      </p>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:50px;">
+    <a href="#guidance" class="cta primary">Get Free Academic Guidance</a>
+  </div>
+</section>
+
+<!-- AI ASSISTED LEARNING -->
+<section>
+  <h2 class="section-title">AI-Assisted Learning with ConceptOS™</h2>
+  <p class="section-sub">
+    Smarter learning through clarity, feedback, and continuous improvement.
+  </p>
+
+  <div class="grid-3">
+    <div class="card">
+      <h3>Personalized Concept Support</h3>
+      <p>
+        ConceptOS™ is designed to adapt explanations and practice paths
+        based on each student’s understanding level and learning pace.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Doubt Resolution & Feedback Loop</h3>
+      <p>
+        Student doubts, responses, and performance patterns help the system
+        improve guidance — always under teacher supervision.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Progress Intelligence</h3>
+      <p>
+        Learning progress is tracked across concepts, confidence, and application,
+        helping educators make better academic decisions.
+      </p>
+    </div>
+  </div>
+
+  <div class="grid-3" style="margin-top:30px;">
+    <div class="card">
+      <h3>Human-Led, AI-Supported</h3>
+      <p>
+        Technology assists learning workflows, while teachers remain central
+        to explanation, mentoring, and evaluation.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Secure & Scalable by Design</h3>
+      <p>
+        ConceptOS™ is built with future scalability and data responsibility in mind,
+        ensuring learning remains efficient, ethical, and secure.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Continuously Improving System</h3>
+      <p>
+        As feedback grows, the learning system evolves — refining explanations,
+        identifying weak areas, and improving academic support.
+      </p>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:50px;">
+    <a href="#guidance" class="cta">Experience Smart Academic Guidance</a>
+  </div>
+</section>
+
+<!-- FUTURE -->
+<section>
+  <h2 class="section-title">The Future of Learning at Concept Academy</h2>
+  <p class="section-sub">Human-led · System-driven · AI-ready</p>
+
+  <div class="grid-3">
+    <div class="card">
+      <h3>Guided Learning Intelligence</h3>
+      <p>Each student follows a clarity-driven academic path.</p>
+    </div>
+    <div class="card">
+      <h3>Progress That Makes Sense</h3>
+      <p>Understanding, confidence, and scores evolve together.</p>
+    </div>
+    <div class="card">
+      <h3>Human-Led, System-Driven</h3>
+      <p>Technology assists learning. Teachers remain central.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="guidance">
+  <h2>Free Academic Guidance</h2>
+  <p>Speak with an academic mentor to understand the right learning path.</p>
+
+  <form id="leadForm" class="card">
+
+    <div class="form-row">
+      <input type="text" placeholder="Student Name" required>
+      <input type="text" placeholder="Class (e.g. 9, 10, 11, 12)" required>
+    </div>
+
+    <div class="form-row">
+      <select>
+        <option value="">Select Subject (optional)</option>
+        <option>Physics</option>
+        <option>Chemistry</option>
+        <option>Maths</option>
+        <option>Biology</option>
+        <option>English</option>
+        <option>Hindi</option>
+        <option>Other</option>
+      </select>
+      <input type="text" placeholder="If Other, please specify (optional)">
+    </div>
+
+    <div class="form-row">
+      <input type="text" placeholder="City / Area (optional)">
+      <input type="text" placeholder="School Name (optional)">
+    </div>
+
+    <div class="form-row single">
+      <input id="whatsapp" type="tel" placeholder="WhatsApp Number" required>
+    </div>
+
+    <div class="form-row single">
+      <textarea placeholder="What help do you need? (optional)"></textarea>
+    </div>
+
+    <button type="submit" class="btn-primary">
+      Request Guidance
+    </button>
+
+    <p class="form-note">
+      No spam. Only academic guidance via WhatsApp.
+    </p>
+
+  </form>
+</section>
+
+<footer>
+  ConceptOS™ powered learning · Classes 6–12 · All Boards<br>
+  Founded & Led by <strong>Sonia Singh</strong>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
