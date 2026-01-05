@@ -295,3 +295,103 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* ================================
+   MOBILE POLISH PATCH – V3
+   Do NOT edit desktop styles
+   ================================ */
+
+@media (max-width: 768px) {
+
+  /* 1. Global safety reset */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* 2. Main container fixes */
+  .container,
+  .section,
+  .hero,
+  .content {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* 3. Kill horizontal scroll sources */
+  [style*="width: 100vw"],
+  [style*="width: 120%"],
+  .orbit,
+  .galaxy,
+  .planet,
+  .visual-layer {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  /* 4. Absolute positioned visuals → relative on mobile */
+  .orbit,
+  .planet,
+  .floating,
+  .animated-bg {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+  }
+
+  /* 5. Hero section alignment */
+  .hero {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* 6. Button safety */
+  button,
+  .btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 12px auto;
+    padding: 14px 18px;
+    font-size: 1rem;
+  }
+
+  /* 7. Card & section stacking */
+  .grid,
+  .flex,
+  .row {
+    flex-direction: column !important;
+    gap: 20px;
+  }
+
+  /* 8. Login / form polish */
+  input,
+  select,
+  textarea {
+    width: 100%;
+    font-size: 16px; /* prevents iOS zoom */
+    padding: 12px;
+  }
+
+  /* 9. Footer fix */
+  footer {
+    text-align: center;
+    padding: 24px 16px;
+  }
+
+}
