@@ -591,3 +591,48 @@ body {
   }
 
 }
+/* =====================================
+   MOBILE: HOME CARDS = ABOUT CARD FEEL
+   ===================================== */
+@media (max-width: 768px) {
+
+  /* Card containers */
+  .cards,
+  .features,
+  .conceptos-cards,
+  .learning-engine,
+  .home-cards {
+    display: block !important;
+  }
+
+  /* Individual cards */
+  .card,
+  .feature-card,
+  .concept-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 20px auto !important;
+    padding: 22px !important;
+
+    /* Remove desktop forcing */
+    height: auto !important;
+    min-height: unset !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  /* Headings inside cards */
+  .card h3,
+  .feature-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+  }
+
+  /* Paragraph text inside cards */
+  .card p,
+  .feature-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+}
