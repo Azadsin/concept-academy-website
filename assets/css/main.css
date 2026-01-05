@@ -315,6 +315,48 @@ body {
 body {
   overflow-x: clip;
 }
+/* ===============================
+   MOBILE HARD SCROLL FIX – FINAL
+   =============================== */
+@media (max-width: 768px) {
+
+  /* 1. Never lock viewport height on mobile */
+  body,
+  main,
+  .main,
+  .wrapper,
+  .container,
+  .hero,
+  .galaxy,
+  .universe {
+    height: auto !important;
+    min-height: unset !important;
+    overflow: visible !important;
+  }
+
+  /* 2. Transforms MUST NOT affect layout containers */
+  .hero,
+  .container,
+  .section {
+    transform: none !important;
+  }
+
+  /* 3. Only visuals may stay absolute */
+  .planet,
+  .orbit,
+  .star,
+  .bg-effect {
+    position: absolute;
+  }
+
+  /* 4. Restore natural document flow */
+  section {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
 
   /* 2. Main container fixes */
   .container,
