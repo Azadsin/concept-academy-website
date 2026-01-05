@@ -308,13 +308,6 @@ body {
     box-sizing: border-box;
   }
 
-  html {
-  overflow-x: hidden;
-}
-
-body {
-  overflow-x: clip;
-}
 /* ===============================
    MOBILE HARD SCROLL FIX – FINAL
    =============================== */
@@ -438,6 +431,72 @@ body {
   footer {
     text-align: center;
     padding: 24px 16px;
+  }
+
+}
+/* ===============================
+   MOBILE NAVBAR FIX – CLEAN
+   =============================== */
+@media (max-width: 768px) {
+
+  nav,
+  .navbar,
+  .nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 16px;
+  }
+
+  .nav-links,
+  .menu,
+  .nav-menu {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px;
+    margin-top: 12px;
+  }
+
+  .nav-links a,
+  .menu a {
+    font-size: 1rem;
+  }
+
+}
+/* ===============================
+   MOBILE CARD STACK FIX
+   =============================== */
+@media (max-width: 768px) {
+
+  .cards,
+  .card-row,
+  .features,
+  .features-grid,
+  .grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px;
+  }
+
+  .card,
+  .feature-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+}
+
+/* ===============================
+   MOBILE OVERFLOW SAFETY (FINAL)
+   =============================== */
+@media (max-width: 768px) {
+
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: visible;
   }
 
 }
